@@ -1,6 +1,8 @@
 import React from 'react'
 import { createAppContainer, createSwitchNavigator } from 'react-navigation' 
-import { createDrawerNavigator } from 'react-navigation-drawer'
+//import { createDrawerNavigator } from 'react-navigation-drawer'
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+
 
 import Menu from './components/Menu'
 import Home from './screens/Home'
@@ -38,7 +40,8 @@ const menuToutes = {
     },
 }
 
-const menuNavigator = createDrawerNavigator(menuToutes, menuConfig)
+//const menuNavigator = createDrawerNavigator(menuToutes, menuConfig)
+const menuNavigator = createBottomTabNavigator(menuToutes, menuConfig);
 
 const MAINROUTES = {
     Home: {
